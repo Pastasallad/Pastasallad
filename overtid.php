@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
   <head>
     <meta name="robots" content="noindex">
     <?php include 'includes/head.php';?>
@@ -37,24 +37,33 @@
             rows="10" required></textarea>
             <div class="input-group mt-1">
               <div class="input-group date" id="datetimepicker1">
-                <div class="input-group-addon col-4 col-sm-3 col-lg-2">Datum</div>
+                <div class="input-group-prepend">
+                  <div class="input-group-text">Datum</div>
+                </div>
                 <input type="text" name="datum" class="form-control" value="<?php echo date('Y-m-d');?>">
-                <div class="input-group-addon"><i class="fa fa-calendar-o"></i></div>
+                <div class="input-group-append">
+                  <div class="input-group-text"><i class="fa fa-calendar-o"></i></div>
+                </div>
               </div>
             </div>
             <div class="input-group mt-1">
-              <div class="input-group-addon col-4 col-sm-3 col-lg-2">Filnamn</div>
+              <div class="input-group-prepend">
+                  <div class="input-group-text">Filnamn</div>
+                </div>
               <input type="text" name="filnamn" class="form-control" value="<?php echo 'Overtid-' . date('ymd');?>" maxlength="40" required>
-              <div class="input-group-addon">.rtf</div>
+              <div class="input-group-append">
+                <div class="input-group-text">.rtf</div>
+              </div>
             </div>
             <div class="input-group mt-1">
-              <span class="input-group-addon col-6 col-sm-3 col-lg-2">Kompensation</span>
+              <div class="input-group-prepend">
+                  <div class="input-group-text">Kompensation</div>
+                </div>
               <div class="form-control">
-
-                <label class="form-check-label">
+                <label class="radio-inline ml-3">
                   <input type="radio" name="komp" value="P" class="form-check-input" checked> Pengar
                 </label>
-                <label class="form-check-label">
+                <label class="radio-inline ml-4 mr-0">
                   <input type="radio" name="komp" value="T" class="form-check-input"> Tid
                 </label>
               </div>
@@ -71,7 +80,7 @@
             <div class="card-header">
               <i class="fa fa-info-circle fa-lg" style="color:#5bc0de;"></i> Information
             </div>
-            <div class="card-block">
+            <div class="card-body">
               <p class="card-text"><i class="fa fa-angle-double-right"></i> Punktlighetsdata är det enda obligatoriska fältet.</p>
               <p class="card-text"><i class="fa fa-angle-double-right"></i> Ingen information sparas.</p>
               <p class="card-text"><i class="fa fa-angle-double-right"></i> Den ifyllda blanketten laddas ned i formatet &lt;.rtf&gt;
